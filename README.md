@@ -6,6 +6,12 @@ Capstone I project, Department of Electrical and Electronic Engineering, Rajshah
 
 ![Experimental setup of the microgrid prototype](images/experimental-set-up.jpeg)
 
+## Demo video
+
+[![Watch the demo video of the smart DC microgrid](images/demo-cover.jpg)](https://drive.google.com/file/d/1FuYdFt64qmQV-WyudCxst3YyCsJLnlnZ/view)
+
+Click the picture to watch the bench demonstration on Google Drive. The file is about 210 MB, so it can take a moment to start.
+
 ## Features
 
 - **Priority load shedding:** as the battery voltage falls, the motor is cut first, then the fan, then the LED.
@@ -125,9 +131,9 @@ This is a bench prototype at 6 V and about 0.5 A. It is not a certified product.
 
 ```
 smart-dc-microgrid/
-  firmware/   ESP32 sketch (Arduino IDE)
+  firmware/   ESP32 sketch (Arduino IDE) and secrets.example.h
   docs/       project report (PDF)
-  images/     photos of the prototype
+  images/     photos of the prototype and the demo video cover
   README.md
 ```
 
@@ -135,7 +141,7 @@ smart-dc-microgrid/
 
 1. Open the sketch in the `firmware` folder with the Arduino IDE and select the ESP32 DevKit V1 board.
 2. Install the libraries listed in the `#include` lines at the top of the sketch.
-3. Add your own WiFi name and password, Telegram bot token and owner chat ID. These are deliberately not stored in this repository.
+3. Copy `secrets.example.h` to `secrets.h` (same folder as the sketch) and fill in your own WiFi name and password, Telegram bot token and owner chat ID. `secrets.h` is ignored by Git, so these values are deliberately not stored in this repository.
 4. Upload the sketch and open the Serial Monitor.
 
 ## Safety
